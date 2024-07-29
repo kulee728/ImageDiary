@@ -1,0 +1,92 @@
+
+    .fc-right {
+        display: none;
+    }/*우상단 기능제한*/
+	.fc-unthemed td.fc-today{
+		background-color:#bed59a;
+	}/*오늘의 일기 관련*/
+	
+	.fc event{
+		background-color:#ebe5d4;
+		border-color:#ebe5d4;
+	}/*오늘의 일기 관련*/
+	
+	.fc-event, .fc-event-dot {
+    background-color: #bed59a; 
+}/*오늘의 일기 관련*/
+
+
+.fc-event {
+    position: relative;
+    display: block;
+    font-size: 0.85em;
+    line-height: 1.4;
+    border-radius: 3px;
+    border: 1px solid #bed59a;
+}
+/*오늘의 일기 관련*/
+
+.fc-event:hover{
+    background-color:#857a48;
+}
+/*오늘의 일기 관련*/
+
+.fc-button-primary{
+	background-color:#bed59a;
+	border-color: #bed59a;
+}/*좌상단 버튼 관련*/
+
+.fc-button-primary:hover{
+	background-color:#857a48;
+	border-color: #857a48;
+}/*좌상단 버튼 관련*/
+
+.fc-button-primary:disabled {
+    color: #fff;
+    background-color: #bed59a;
+    border-color: #bed59a;
+}/*좌상단 버튼 관련*/
+
+body{
+	background-color:#f0f2e1;
+	color: #857a48;
+} /*바탕색*/
+
+a {
+	margin-right:3px;
+    color:#498168;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a .fc-day-number{
+	/*color: #bed59a;*/
+	color: #808855;
+}
+
+
+.mainFrame{
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  margin: 30px auto;
+  /*color: white;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;*/
+}
+
+.calendarAera{
+	background-color:#bed59a;
+	width:500px;
+}
+
+.subAera{
+	background-color:#bed59a;
+	width:300px;
+}
+
+footer{
+background-color: #BED59A;
+color: darygray;
+}

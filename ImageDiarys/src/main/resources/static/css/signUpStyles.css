@@ -1,0 +1,115 @@
+body{
+	background-color: #f0f2e1;
+}
+
+.bodys{
+    background-color: #f0f2e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #bed59a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+.form-group label {
+    margin-right: 10px;
+    font-weight: bold;
+    width: 100px; /* 고정된 너비 */
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"] {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    width: calc(100% - 110px);
+    margin-right: 10px;
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.form-group .btn {
+    background-color: #346a76;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.btn:hover {
+    background-color: #bed59a;
+}
+
+.submit-btn {
+    background-color: #f0f2e1;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    background-color: #857a48;
+}
+
+.input-text::placeholder {
+    font-size: 12px;
+}
+
+.comment {
+    position: absolute;
+    bottom: -8px;
+    left: 130px;
+    font-size: 9px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    background-color: #BED59A;
+    color: darygray;
+    }

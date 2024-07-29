@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="coddingcoggies.mapper.MainPageMapper">
+
+	<resultMap type="coddingcoggies.dto.SpecialDate"
+		id="specialDateMap">
+		<id column="specialdate_id" property="specialDate_id" />
+		<result column="specialdate_date" property="specialDate_date" />
+		<result column="specialdate_type" property="specialDate_type" />
+		<result column="specialdate_color" property="specialDate_color" />
+		<result column="specialdate_name" property="specialDate_name" />
+		<result column="member_no" property="member_no" />
+	</resultMap>
+
+	<select id="getAllSpecialDateByMemberNo"
+		resultType="coddingcoggies.dto.SpecialDate" parameterType="java.util.Map">
+		SELECT * FROM diary_specialDate
+		WHERE member_no = #{member_no}
+		AND (
+		specialDate_type = '2' AND SUBSTR(specialDate_date,1,6) = #{yyyyMM}
+		OR
+		specialDate_type = '1' AND specialDate_date >= #{todayDate}
+		)
+		ORDER BY specialDate_type, specialDate_date
+	</select>
+	  
+	<select id="getAllDiaryByMemberNo"
+		resultType="coddingcoggies.dto.Diary" parameterType="int">
+		SELECT * FROM diary 
+		WHERE member_no = #{member_no}
+	</select>
+	
+<!-- 
+	<select id="getMainCalanderInfo" resultType="coddingcoggies.dto.MainCalander">
+		SELECT * FROM 
+	</select>
+ -->
+</mapper>

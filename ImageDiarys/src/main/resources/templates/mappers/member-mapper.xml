@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<mapper namespace="coddingcoggies.mapper.MemberMapper">
+	<insert id="insertMember" parameterType="coddingcoggies.dto.Member">
+		INSERT INTO diary_member (member_no, member_id,	member_pw, member_diaryname, member_email)
+		
+		VALUES (diary_member_seq.NEXTVAL, #{member_id}, #{member_pw}, #{member_diaryName}, #{member_email})
+	</insert>
+	
+		<select id="getId" resultType="java.lang.Integer">
+		SELECT COUNT(*) FROM diary_member <!--  만약에 한명이라도 조회되면 카운트에 1 이라고 뜰 것이고, 동일한아이디가 2개면 2가 뜰 것 없으면 아무것도 안뜸
+		java.lang.Integer -> 강제 숫자만들기
+		 -->
+		WHERE member_id = #{member_id}
+	</select>
+</mapper>

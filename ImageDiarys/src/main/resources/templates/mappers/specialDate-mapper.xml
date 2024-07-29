@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="coddingcoggies.mapper.SpecialDateMapper">
+	<insert id="insertSpecialDate"
+		parameterType="coddingcoggies.dto.SpecialDate">
+		INSERT INTO diary_specialDate (specialDate_id, specialDate_date,
+		specialDate_type, specialDate_color, specialDate_name, member_no)
+		VALUES (diary_specialDate_seq.NEXTVAL, #{specialDate_date},
+		#{specialDate_type}, #{specialDate_color}, #{specialDate_name},
+		#{member_no})
+	</insert>
+
+	<select id="getAllSpecialDateByMemberNo"
+		resultType="coddingcoggies.dto.SpecialDate"
+		parameterType="int">
+		SELECT * FROM diary_specialDate
+		WHERE member_no = #{member_no}
+	</select>
+	
+	<select id="getSpecialDateById"
+		resultType="coddingcoggies.dto.SpecialDate"
+		parameterType="int">
+		SELECT * FROM diary_specialDate
+		WHERE specialDate_id = #{specialDate_id}
+	</select>
+	
+	<update id="updateSpecialDate" parameterType="coddingcoggies.dto.SpecialDate">
+		UPDATE diary_specialDate
+		SET specialDate_date = #{specialDate_date},
+			specialDate_type = #{specialDate_type},
+			specialDate_name = #{specialDate_name}
+		WHERE
+			specialDate_id = #{specialDate_id}
+	</update>
+	<delete id="deleteSpecialDate" parameterType="int">
+		DELETE FROM diary_specialDate
+		WHERE specialDate_id = #{specialDate_id}
+	</delete>
+	
+</mapper>
